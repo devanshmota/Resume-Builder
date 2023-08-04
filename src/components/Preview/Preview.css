@@ -1,0 +1,23 @@
+.Preview .wrapper_template {
+    padding-top: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+.Preview .choose_template {
+    display: flex;
+    flex-direction: column;
+}
+
+.Preview .choose_template p {
+    margin: 1rem 0rem;
+    font-size: 1.4rem;
+}
+
+.Preview .choose_template label {
+    padding-left: 5px;
+}
+
+.Preview .first_template {
+    padding: 5px 0px;
+}

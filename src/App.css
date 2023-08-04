@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=Poppins:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.App {
+    font-family: 'Outfit', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    display: flex;
+}
+
+.form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 17rem;
+    padding-top: 3rem;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+}
+
+input:not(.login_input, .Export input, .Preview input) {
+    outline: none;
+    height: 2rem;
+    width: 22rem;
+    padding: 1rem 0.5rem;
+}
+
+.save_delete_btn {
+    padding: 0.3rem 1rem;
+    border: 0;
+    background: blue;
+    border-radius: 0.2rem;
+    color: white;
+    margin: 0rem 0.2rem;
+    margin-top: 1rem;
+    cursor: pointer;
+
+}
+
+.add_btn {
+    padding: 0.3rem 1rem;
+    border: 0;
+    background: blue;
+    border-radius: 0.2rem;
+    color: white;
+    margin: 0rem 0.2rem;
+    margin-top: -1rem;
+    cursor: pointer;
+}
+
+.btn {
+    text-align: center;
+}
+
+h2 {
+    margin: 1rem 0rem;
+    text-align: center;
+}
+
+.cardWrapper {
+    background-color: #e6e6e6;
+    padding: 1.7rem;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+}
+
+.cardWrapper.last {
+    margin-bottom: 0;
+}
