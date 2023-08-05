@@ -1,33 +1,33 @@
-.Export .wrapper_template {
+.wrapper_template {
     padding-top: 3rem;
     display: flex;
     justify-content: center;
 }
 
-.Export .choose_template {
+.choose_template {
     display: flex;
     flex-direction: column;
 }
 
-.Export .choose_template p {
+.p {
     margin: 1rem 0rem;
     font-size: 1.4rem;
 }
 
-.Export .choose_template label {
+.label {
     padding-left: 5px;
 }
 
-.Export .first_template {
+.first_template {
     padding: 5px 0px;
 }
 
-.Export .btn {
+.btn {
     text-align: center;
     margin-bottom: 1rem;
 }
 
-.Export button.download_btn {
+.download_btn {
     text-align: center;
     padding: 0.3rem 1rem;
     border: 0;

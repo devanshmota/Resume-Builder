@@ -1,5 +1,5 @@
 import React from 'react'
-import './FirstTemplate.css';
+import styles from './FirstTemplate.module.css';
 import { useSelector } from 'react-redux'
 
 function FirstTemplate() {
@@ -15,32 +15,32 @@ function FirstTemplate() {
     return (
         <div className='FirstTemplate' id='FirstTemplate'>
 
-            <div className='details'>
-                <div className="wrapper">
+            <div className={styles.details}>
+                <div className={styles.wrapper}>
                     <div className="personal_details">
-                        <div className='heading'>
+                        <div className={styles.heading}>
                             <h1>{personalinfo.fullName}</h1>
 
 
                         </div>
                         <div className='description'>
-                            <p><strong>{personalinfo.email}</strong></p>
-                            <p><strong>{personalinfo.phoneNumber}</strong></p>
-                            <p><strong>{personalinfo.professionalSummary}</strong></p>
+                            <p className={styles.p}><strong>{personalinfo.email}</strong></p>
+                            <p className={styles.p}><strong>{personalinfo.phoneNumber}</strong></p>
+                            <p className={styles.p}><strong>{personalinfo.professionalSummary}</strong></p>
                         </div>
 
                     </div>
                     <div className="education_info">
-                        <div className="heading">
-                            <h2>Education Info</h2>
+                        <div className={styles.heading}>
+                            <h2 className={styles.h2}>Education Info</h2>
 
                         </div>
 
-                        <ul className='FirstTemplate_ul'>
+                        <ul className={styles.FirstTemplate_ul}>
                             {
                                 education.map((item, i) => {
                                     return (
-                                        <div key={i} className='separator'>
+                                        <div key={i} className={styles.separator}>
                                             <li><strong>Name of the educational institution :</strong> {education[i].nameOfInstitution}</li>
                                             <li><strong>Major/Field of Study :</strong> {education[i].fieldOfStudy}</li>
                                             <li><strong>Degree or Certification obtained :</strong> {education[i].degree}</li>
@@ -54,15 +54,15 @@ function FirstTemplate() {
                         </ul>
                     </div>
                     <div className="work_exp">
-                        <div className="heading">
-                            <h2>Work Experience</h2>
+                        <div className={styles.heading}>
+                            <h2 className={styles.h2}>Work Experience</h2>
 
                         </div>
-                        <ul className='FirstTemplate_ul'>
+                        <ul className={styles.FirstTemplate_ul}>
                             {
                                 workExperience.map((item, i) => {
                                     return (
-                                        <div key={i} className='separator'>
+                                        <div key={i} className={styles.separator}>
                                             <li><strong>Company/Organization Name :</strong> {workExperience[i].companyName}</li>
                                             <li><strong>Job Title :</strong> {workExperience[i].jobTitle}</li>
                                             <li><strong>Start Date :</strong> {workExperience[i].startDate}</li>
@@ -75,16 +75,16 @@ function FirstTemplate() {
                         </ul>
                     </div>
                     <div className="skills">
-                        <div className="heading">
-                            <h2>Skills</h2>
+                        <div className={styles.heading}>
+                            <h2 className={styles.h2}>Skills</h2>
 
                         </div>
-                        <div className="skill_wrapper">
+                        <div className={styles.skill_wrapper}>
 
-                            <div className="technical_skills">
+                            <div className={styles.technical_skills}>
                                 <h4>Technical Skills</h4>
 
-                                <ul className='FirstTemplate_ul'>
+                                <ul className={styles.FirstTemplate_ul}>
 
                                     {
                                         technicalSkills.map((item, i) => {
@@ -99,7 +99,7 @@ function FirstTemplate() {
                             </div>
                             <div className="soft_skills">
                                 <h4>Soft Skills</h4>
-                                <ul className='FirstTemplate_ul'>
+                                <ul className={styles.FirstTemplate_ul}>
 
                                     {
                                         softSkills.map((item, i) => {
@@ -119,16 +119,16 @@ function FirstTemplate() {
 
 
                     <div className="projects">
-                        <div className="heading">
-                            <h2>Projects</h2>
+                        <div className={styles.heading}>
+                            <h2 className={styles.h2}>Projects</h2>
 
                         </div>
 
-                        <ul className='FirstTemplate_ul'>
+                        <ul className={styles.FirstTemplate_ul}>
                             {
                                 projects.map((item, i) => {
                                     return (
-                                        <div key={i} className='separator' >
+                                        <div key={i} className={styles.separator} >
                                             <li><strong>Project Name :</strong> {projects[i].projectName}</li>
                                             <li><strong>Description of the project :</strong> {projects[i].description}</li>
                                             <li><strong>Your role and contributions :</strong> {projects[i].yourRole}</li>
@@ -139,16 +139,16 @@ function FirstTemplate() {
                         </ul>
                     </div>
                     <div className="certifications">
-                        <div className="heading">
-                            <h2>Certifications</h2>
+                        <div className={styles.heading}>
+                            <h2 className={styles.h2}>Certifications</h2>
 
                         </div>
 
-                        <ul className='FirstTemplate_ul'>
+                        <ul className={styles.FirstTemplate_ul}>
                             {
                                 certificate.map((item, i) => {
                                     return (
-                                        <div key={i} className='separator'>
+                                        <div key={i} className={styles.separator}>
                                             <li><strong>Certification Name :</strong> {certificate[i].certificationName}</li>
                                             <li><strong>Issuing Organization :</strong> {certificate[i].issuingOrganization}</li>
                                         </div>
@@ -158,16 +158,16 @@ function FirstTemplate() {
                         </ul>
                     </div>
                     <div className="certifications">
-                        <div className="heading">
-                            <h2>Awards and Achievements</h2>
+                        <div className={styles.heading}>
+                            <h2 className={styles.h2}>Awards and Achievements</h2>
 
                         </div>
 
-                        <ul className='FirstTemplate_ul'>
+                        <ul className={styles.FirstTemplate_ul}>
                             {
                                 awards.map((item, i) => {
                                     return (
-                                        <div key={i} className='separator'>
+                                        <div key={i} className={styles.separator}>
                                             <li><strong>Name of the award/achievement :</strong> {awards[i].nameOfAward}</li>
                                             <li><strong>Date of receiving the award :</strong> {awards[i].dateWhenReceived}</li>
                                         </div>
@@ -178,12 +178,12 @@ function FirstTemplate() {
                     </div>
 
                     <div className="hobbies">
-                        <div className="heading">
-                            <h2>Hobbies</h2>
+                        <div className={styles.heading}>
+                            <h2 className={styles.h2}>Hobbies</h2>
 
                         </div>
 
-                        <ul className='FirstTemplate_ul hobby_ul'>
+                        <ul className={styles.hobby_ul}>
                             {
                                 hobbies.map((item, i) => {
                                     return (

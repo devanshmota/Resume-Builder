@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import './Export.css'
+import styles from './Export.module.css'
 import { setPersonalinfo } from '../../Data/personalinfoSlice'
 import { setEducation } from '../../Data/educationSlice'
 import { setWorkExperience } from '../../Data/workexpSlice'
@@ -172,17 +172,17 @@ function Export() {
     return (
         <>
             <div className='Export'>
-                <div className="wrapper_template">
-                    <div className="choose_template">
-                        <p>Select the template</p>
-                        <div className="first_template">
+                <div className={styles.wrapper_template}>
+                    <div className={styles.choose_template}>
+                        <p className={styles.p}>Select the template</p>
+                        <div className={styles.first_template}>
                             <input type="radio" id='firstTemplate' value='FirstTemplate' name='template' checked={input === 'FirstTemplate'} onChange={(e) => setInput(e.target.value)} />
-                            <label htmlFor="firstTemplate">First Template</label>
+                            <label htmlFor="firstTemplate" className={styles.label}>First Template</label>
                         </div>
 
                         <div className="second_template">
                             <input type="radio" id='secondTemplate' value='SecondTemplate' name='template' checked={input === 'SecondTemplate'} onChange={(e) => setInput(e.target.value)} />
-                            <label htmlFor="secondTemplate">Second Template</label>
+                            <label htmlFor="secondTemplate" className={styles.label}>Second Template</label>
                         </div>
                     </div>
                 </div>
@@ -190,8 +190,8 @@ function Export() {
                     input === 'FirstTemplate' ? <FirstTemplate /> : input === 'SecondTemplate' ? <TemplateSecond /> : null
 
                 }
-                <div className="btn">
-                    <button onClick={downloadAsPDF} className='download_btn'>Download as PDF</button>
+                <div className={styles.btn}>
+                    <button onClick={downloadAsPDF} className={styles.download_btn}> Download as PDF</button>
                 </div>
 
             </div>

@@ -1,4 +1,4 @@
-.main_header ul {
+.ul {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -10,7 +10,16 @@
     z-index: 1;
 }
 
-.Header .active {
+.a {
+    text-decoration: none;
+    color: grey;
+
+    &:hover {
+        color: black
+    }
+}
+
+.active {
     background-color: blue;
     color: white;
     padding: 5px 15px;
